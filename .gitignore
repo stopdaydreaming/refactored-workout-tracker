@@ -1,5 +1,6 @@
 # Specific Files
 INSTRUCTIONS.MD
+*.DS_Store
 
 # Logs
 logs
