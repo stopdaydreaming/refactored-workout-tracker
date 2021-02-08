@@ -2,9 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Workout = require("./models/Workout");
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
 const app = express();
+
+const apiController = require("./routes/api");
+const viewsController = require("./controllers/views");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
