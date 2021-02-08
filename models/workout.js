@@ -3,44 +3,49 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 //use virtuals in this file
-const WorkoutSchema = new Schema({
-  day: {
-    type: Date,
-    default: Date.now,
+const WorkoutSchema = new Schema(
+  {
+    day: {
+      type: Date,
+      default: Date.now
+    },
+    exercises: [
+      {
+        type: {
+          type: String
+        },
+        name: {
+          type: String
+        },
+        duration: {
+          type: Number
+        },
+        weight: {
+          type: Number
+        },
+        reps: {
+          type: Number
+        },
+        sets: {
+          type: Number
+        },
+        distance: {
+          type: Number
+        }
+      }
+    ]
   },
-  exercises: [{
-    type: {
-      type: String,
-    },
-    name: {
-      type: String,
-    },
-    duration: {
-      type: Number,
-    },
-    weight: {
-      type: Number,
-    },
-    reps: {
-      type: Number,
-    },
-    sets: {
-      type: Number,
-    },
-    distance: {
-      type: Number,
-    },
-  },
-],
-},
-{
-  virtuals: true,
-}
+  {
+    toJSON: {
+      virtuals: true
+    }
+  }
 );
 
 WorkoutSchema.virtual("totalDuration").get(function() {
   return this.exercises.reduce(
-    (accumulator, exercise) => accumulator + exercise.duration, 0
+    (accumulator, exercise) => accumulator + exercise.duration,
+    0
   );
 });
 
