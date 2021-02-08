@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const apiController = require("./routes/api");
-const viewsController = require("./controllers/views");
+const viewsController = require("./routes/views");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
