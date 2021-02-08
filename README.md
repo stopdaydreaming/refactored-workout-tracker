@@ -16,8 +16,10 @@ Workout Tracker is an app to view, create and track daily workouts.
 ### Steps required to run locally
 1. Clone/download the code in this repo
 2. Navigate to the location of the code downloaded
-3. Double-click on the html file provided in the downloaded code to preview 
-### Steps required to online
+3. Run `npm install` to add required packages
+4. Run `npm start` 
+5. Open your browser to localhost with the port address
+### Steps required to run online
 Click this link to [VIEW APP](#)
 
 
