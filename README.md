@@ -27,10 +27,13 @@ Click this link to [VIEW APP](https://refactored-workout-tracker.herokuapp.com/)
 
 ## Usage 
 This code should be used for the purpose of creating/editing code for a Workout Tracker app. 
-![Workout Tracker](#)
+![Workout Tracker](./public/assets/images/screenshot01.png)  
+![Workout Tracker](./public/assets/images/screenshot02.png)  
+![Workout Tracker](./public/assets/images/screenshot03.png)  
 
 ## Credits
 1 contributor: @stopdaydreaming  
+special thanks to my amazing tutor.
 
 ## License
 Copyright (c) Workout Tracker. All rights reserved.
