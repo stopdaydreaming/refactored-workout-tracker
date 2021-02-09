@@ -42,10 +42,13 @@ const WorkoutSchema = new Schema(
   }
 );
 
+//get the workout duration, without adding a new column to get total workout
+//makes use of db optimization
 WorkoutSchema.virtual("totalDuration").get(function() {
   return this.exercises.reduce(
     (accumulator, exercise) => accumulator + exercise.duration,
     0
+    //need 0 as part of the built-in reduce function, start at 0
   );
 });
 

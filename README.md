@@ -22,7 +22,7 @@ Workout Tracker is an app to view, create and track daily workouts.
 4. Run `npm start` 
 5. Open your browser to localhost with the port address
 ### Steps required to run online
-Click this link to [VIEW APP](#)
+Click this link to [VIEW APP](https://refactored-workout-tracker.herokuapp.com/)
 
 
 ## Usage 

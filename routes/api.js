@@ -5,6 +5,7 @@ const Workout = require("../models/workout");
 router.get("/api/workouts", (req, res) => {
     Workout.find()
     .limit(1)
+    //sort by object, key/value pair; sort asc or desc
     .sort({ _id: -1 })
     .then((workout) => {
         res.json(workout);
@@ -34,6 +35,7 @@ router.put("/api/workouts/:id", (req, res) => {
       res.json(updateWorkout);
     })
     .catch(err => {
+      //can send back 404 if user/id not found
       res.json(err);
     });
 });
